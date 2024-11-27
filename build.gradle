@@ -68,23 +68,21 @@ repositories {
         name "JEI"
         url "http://dvs1.progwml6.com/files/maven"
     }
+    // modified since original repos are down
     maven {
-        name "HWYLA"
-        url "http://tehnut.info/maven"
-    }
-    ivy {
-        name "AE2"
-        artifactPattern "http://addons-origin.cursecdn.com/files/${config.ae2.cf}/[module]-[revision](-[classifier])(.[ext])"
-    }
+        url 'https://cursemaven.com'
+	}
 }
 
 dependencies {
     compile "net.bdew:bdlib:${config.bdlib.version}-mc${config.minecraft.version}:dev"
 
     deobfCompile "mezz.jei:jei_${config.minecraft.version}:${config.jei.version}"
-    deobfCompile "mcp.mobius.waila:Hwyla:${config.hwyla.version}"
-
-    deobfCompile ":appliedenergistics2:${config.ae2.version}@jar"
+    // using the mods from curseforge directly (version not automatically pulled)
+    //version 1.8.20-B35_1.12
+    compile "curse.maven:hwyla-253449:2462171"
+    //version rv5-beta-1
+    compile "curse.maven:appliedenergistics2-223794:2490639"
 
 }
 
