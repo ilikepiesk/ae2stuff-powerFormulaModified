@@ -6,7 +6,7 @@ To install gradle
 - edit system environment variables (windows search brings it up)
 - click "environment variables..."
 - under system variables click Path and edit
-- Browse and click the bin folder of the extracted gradle release
+- Click Browse and find the bin folder of the extracted gradle release
 
 To compile it:
 - Open a command prompt
